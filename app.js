@@ -15,8 +15,12 @@ var express       =require('express'),
 var commentRoutes=require('./routes/comments'),
 	campgroundRoutes=require('./routes/campgrounds'),
 	indexRoutes=require('./routes/index')
-	
-mongoose.connect('mongodb://localhost:27017/yelp_camp', { useNewUrlParser: true, useUnifiedTopology: true });
+	mongoose.connect('mongodb+srv://kunaalmaan:Pass1234@yelpcamp-8u7su.mongodb.net/yelpcamp?retryWrites=true&w=majority',{
+		 useNewUrlParser: true,
+		useCreateIndex:true,
+		useUnifiedTopology: true
+	});
+//mongoose.connect('mongodb://localhost:27017/yelp_camp', { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set('useFindAndModify', false);
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
