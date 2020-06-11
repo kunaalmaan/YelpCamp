@@ -55,6 +55,6 @@ app.use(indexRoutes);
 app.use("/campgrounds",campgroundRoutes); //as all routes in campgroundRoutes start with "/campgrounds" so we can dry up the code a little by adding this in app.use and removing "/campgrounds" from all the urls in campgrounds.js
 app.use("/campgrounds/:id/comments",commentRoutes); //same here
 
-app.listen(3000,function(){
+app.listen(process.env.PORT || 3000,function(){
 	console.log("The Yelp Camp server has started");
 })
