@@ -6,6 +6,10 @@ var User	      =require("../models/user");
 router.get("/",function(req,res){
 	res.render("landing"); 
 });
+//ABOUT US
+router.get("/about",function(req,res){
+	res.render("about");
+})
 
 //===========
 //AUTH ROUTES
